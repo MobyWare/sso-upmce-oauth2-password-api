@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Simple Angular Greeting Client</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>        
+    </head>
+    <body>
+        <h1>Welcome to Mo's Simple Greeting App</h1>
+        <div ng-app="GreetingApp">
+            <h3>The greeting is:</h3>
+            <p>{{greeting}}</p>
+            <input type="button" ng-click="getGreeting()" value="Get greeting"/>
+            
+            <p>{{greeting}}</
+        </div>
+        <!--Scripts are added last so that DOM is already rendered-->
+        <script src="src/GreetingApp.js"></script>
+        <script src="src/GreetingController.js"></script>
+    </body>
+</html>
