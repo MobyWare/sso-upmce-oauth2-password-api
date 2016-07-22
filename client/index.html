@@ -5,12 +5,10 @@
     </head>
     <body>
         <h1>Welcome to Mo's Simple Greeting App</h1>
-        <div ng-app="GreetingApp">
+        <div ng-app="GreetingApp" ng-controller="GreetingController">
             <h3>The greeting is:</h3>
-            <p>{{greeting}}</p>
-            <input type="button" ng-click="getGreeting()" value="Get greeting"/>
-            
-            <p>{{greeting}}</
+            <p>{{greeting.content}}</p>
+            <button ng-click="getGreeting()" >Get greeting</button>
         </div>
         <!--Scripts are added last so that DOM is already rendered-->
         <script src="src/GreetingApp.js"></script>
