@@ -1,0 +1,30 @@
+#------------------------------------------------------------------------------
+# Server Configuration
+#------------------------------------------------------------------------------
+server:
+  port: 8443
+  ssl:
+    key-store: classpath:greeting-api.keystore
+    key-password: password
+    key-store-password: password
+
+#------------------------------------------------------------------------------
+# OAuth & Security
+#------------------------------------------------------------------------------
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-value:
+          -----BEGIN PUBLIC KEY-----
+          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq6aE9Hf5aOQbWH828XxZ
+          LcH/5VCpNdEBY/q9PPgKwTJen/E/UdOWDU1fYG5FimgMCMM8t0lEk2kbcxEzRSU4
+          ZWG3q78PMUzxkA1d0QEgSO19a7rRozBMyJRDev1CHN8bOqrLCCEjBhw0jTmC0a7a
+          M3elXPS27KWbU2Xi+6Bznih83N6xpLo2w16q9Xh191MNq9oBl5MDj7sj2y1tyVZI
+          VQhbrog11pWTi925tmwSj71oKy8nHVDBlbtK1XqFZYuOObZDBqDX7fDMz06f/DQa
+          JAkP0Uy9Kz7avhrgnIr47FlrM9gKUsTlx9dZVY9aQHvu+GEJ661XkRZ79UBh3xII
+          WwIDAQAB
+          -----END PUBLIC KEY-----
+  basic:
+    enabled: false
+  ignored:
