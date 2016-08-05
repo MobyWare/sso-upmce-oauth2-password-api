@@ -1,17 +1,15 @@
 <html>
     <head>
         <title>Simple Angular Greeting Client</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>   
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script> <!--look up version-->     
     </head>
-    <body>
+    <body ng-app="GreetingApp">
         <h1>Welcome to Mo's Simple Greeting App</h1>
-        <div ng-app="GreetingApp" ng-controller="GreetingController">
-            <h3>The greeting is:</h3>
-            <p>{{greeting.content}}</p>
-            <button ng-click="getGreeting()" >Get greeting</button>
+        <div  ui-view>
         </div>
         <!--Scripts are added last so that DOM is already rendered-->
-        <script src="src/GreetingApp.js"></script>
-        <script src="src/GreetingController.js"></script>
+        <script src="js/GreetingApp.js"></script>
+        <script src="js/GreetingController.js"></script>
     </body>
 </html>
